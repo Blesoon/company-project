@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color:rgb(31, 30, 30);
+}
+
+a{  
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    vertical-align:  top;
+    border: 0;
+}
+
+.wrap{
+    min-width: 1240px;
+    width: 100%;
+}
+
+.header{
+    height: 80px;
+    
+}
+
+.header_in{
+    align-items: center;
+    height: 80px;
+     
+    margin: 0px auto 0px auto;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo a{
+    display: block;
+    width: 138px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../img/download.png);
+    text-indent: -9999px;
+}
+
+.gnb ul{
+    display: flex;
+    align-items: center;
+}
+
+.gnb li{
+    margin: 0px 50px 0px 0px;
+}
+
+.gnb li a{
+    color:rgb(31, 30, 30);
+    font-size: 18px;
+}
+
+.gnb li a:hover{
+    transition: all 0.5s;
+    color: rgb(255, 0, 128);
+}
+
+.member ul{
+    display: flex;
+}
+
+.member li{
+    margin: 0px 15px 0px 0px;
+}
+
+.member .seach a{
+    text-indent: -9999px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url(../img/icon_search.png);
+}
+
+.member .cart a{
+    text-indent: -9999px;
+    display: block;
+    width: 22px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url(../img/icon_cart.png);
+}
+
+.member li a{
+    color:rgb(31, 30, 30);
+}
+
+.member li a:hover{
+    border-bottom: 1px solid black;
+}
+
+/* ---------------------------------------------- */
+
+.main1 {
+    position: relative;
+    height: 480px;
+    margin-bottom: 40px;
+    /* .main1의 공간 밖의 내용을 보이지 않게 설정함. */
+    overflow: hidden;
+
+}
+
+.main1_img{
+    top: 0px;
+    left: 50%;
+    margin-left: -800px;
+    position: absolute;
+}
+
+/*
+    .main1_img의 이미지 너비값이 안전사이즈보다 넓음.
+    
+    그래서 강제로 가운데 배치하기 위해서 position : absolute를 사용함.
+    
+    .main1의 하나뿐인 자식인 .main1_img가 absolute처리가 되면
+    세로 높이 값이 0으로 처리가 되므로
+    .main1에서 사용할 만큼의 높이값을 강제로 입력함.
+    
+    브라우저의 너비보다 더 큰 이미지 때문에 아래쪽에 스크롤이 생기므로
+    이를 정리하기 위해서 .main1에 overflow : hidden;을 설정함.
+
+    안전사이즈보다 브라우저의 크기가 작아질 경우
+    .main1_img의 이미지가 잘려서 표시가 되므로
+    전체 영역의 최소 너비값(min-width)을 안전사이즈의 너비로 고정함.
+*/
+
+.main2{
+    width: 1200px;
+    margin: 0px auto 40px auto;
+}
+
+.main2_img{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ---------------------------------------------- */
+
+
+.main3{
+    position: relative;
+    margin: 0px auto 50px auto;
+    width: 1200px;
+}
+
+.main3 h2{
+    /*
+        css를 시작할때 body태그에 적용한 기본 줄높이가 20px임
+        폰트의 기본 높이값 = 줄높이
+        폰트 사이즈가 더 커지면 글자가 위,아래의 영역과 겹쳐지므로
+        줄높이도 같이 수정해야함.
+    */
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.main3 h2 span{
+    font-weight: normal;
+}
+
+.main3_item ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main3_item li{
+    width: 285px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.main3_item li:last-child{
+    margin-right: 0px;
+}
+
+.main3_item a{
+    color: black;
+}
+
+.main3_item .itemImg{
+    margin-bottom: 20px;
+}
+
+.main3_item .itemBrand{
+    margin-bottom: 5px;
+}
+
+.main3_item .itemName{
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.main3_item .itemPrice{
+    font-weight: bold;
+    font-size: 14px;
+    background-image: url(../img/won.png);
+    background-repeat: no-repeat;
+    background-position: 100px 6px;
+    
+}
+
+.main3_item .itemImg img{
+    width: 100%;
+    box-shadow: 0px 1px 10px 0px rgba(33, 33, 33, 0.28);
+}
+
+.main3_item img:hover{
+    transition: transform 0.5s;
+    transform:scale(1.1, 1.1);
+}
+
+.main3_item span img{
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 6px;
+    
+}
+
+.more{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.more a{
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding: 0px 16px 0px 0px;
+    background-image: url(../img/icon_plus.png);
+    color: rgb(36, 35, 35);
+    
+}
+
+.more a:hover{
+    border-bottom: 1px solid black;
+}
+
+/* ---------------------------------------------- */
+
+
+.main4{
+    position: relative;
+    margin: 0px auto 50px auto;
+    width: 1200px;
+}
+
+.main4 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main4 .m4Img img{
+    width: 100%;
+}
+
+.main4 .m4Txt{
+    
+    margin-left: 20px;
+    margin-top: -20px;
+    top: 50%;
+    position: absolute;
+}
+
+.main4 a{
+    font-size: 16px;
+    color: rgb(34, 33, 33);
+}
+
+/* ---------------------------------------------- */
+
+.footer{
+    border-top: 1px solid #aaa;
+    padding: 20px 0px 0px 0px;
+
+}
+.Ft_in{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0px auto;
+    margin-bottom: 40px;
+}
+
+
+.FT ul{
+    display: flex;
+}
+
+.FT li{
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.FT li a{
+    color: rgb(46, 45, 45);
+}
+
+.FT .point a{
+    color: rgb(255, 0, 128);
+}
+
+.f_info .mar{
+    margin-right: 15px;
+}
+
+.f_info .bar{
+    color: #aaa;
+    margin: 0px 4px;
+}
+
+.FR_img{
+    margin-bottom: 10px;
+}
+
+.FR a{
+    
+    color: rgb(54, 53, 53);
+}
+
+.FR a img{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.FR .flogo{
+    margin-bottom: 10px;
+    display: block;
+    width: 79px;
+    height: 40px;
+    background-image: url(../img/inicis.png);
+}
+
+.FR a{
+    padding-right: 12px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-image: url(../img/arrow01.png);
+}
